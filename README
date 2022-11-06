@@ -1,0 +1,115 @@
+Aldica Maria Miruna
+-Now You See Me-
+
+Descriere
+In Card.c 
+Am implementat urmatoarele functii:
+
+create_deck : folosita de oricate ori dorim sa facem
+un nou pachet cu date specificate anterior; implementare
+de lista dublu inlantuita, clasica
+
+create_card : folosita de oricate ori dorim sa facem
+o noua carte in lista de carti
+
+add_last_card : folosita pentru a aduga o carte pe ultima
+pozitie din pachet; consideram toate cazurile posibile,
+inclusiv cand pachetul e gol
+
+add_card_to_deck : folosita pentru a aduga noua carte 
+intr-un pachet specificat deja, unde deja avem datele
+cartii cunoscute
+
+add_deck : functie pentru adaugarea unui nou pachet in 
+lista de pachete; consideram inclusiv cazul in care nu 
+mai exita alt pachet in lista
+
+show_deck : afiseaza toate cartile dintr-un pachet
+cu index cerut; consideram inclusiv cazul in care indexul 
+e 0, deci pachetul e primul
+
+free_card : eliberam memoria cartilor(data si valoare)
+
+free_deck : eliberam memoria pachetelor(inclusiv cartile din
+pachete )
+
+del_deck : functie de stergere a pachetului impreuna cu toate
+cartile din el. Trebuie neaparat eliberata si memoria.
+Consideram inclusiv cazul in care indexul pachetului e 0,
+deci e primul.
+
+free_ierarchy : eliberam memoria lui home, lista in care 
+lucram noi
+
+show_deck_aux : afisam valorile unui pachet luat la 
+intamplare (valoarea si numele)
+
+show_all : afisarea intregii ierarhii de pachete si carti,
+cu valorile corespunzatoare prin parcurgere
+
+deck_number : returneaza numarul de pachete din lista
+
+deck_len : returneaza numarul de carti din pachetul cu
+indexul specificat
+
+del_card : stergem un pachet specificat prin index,
+ cartile din el si neaparat eliberam memoria
+
+cauta_pachet_d : avanseaza catre pachetul cu indexul
+introdus
+
+In tema1.c 
+Am implementat urmatoarele functii:
+
+shuffle_deck : inverseaza prima si a doua
+jumatate a pachetului si inversam valorile din capete 
+doua cate doua
+
+remodelare : refacem pachetul ce a suferit modificari, 
+o vom folosi la merge_decks
+
+merge_decks : functie ce combina doua pachte luand carti
+una cate una, definim o noua lungime, folosindu-ne de ea, un
+nou pachet, adaugam una cate una si stergem pachetele 
+folosite si epuizate 
+
+revrese_deck : functie ce inverseaza ordinea cartilor
+din pachte si ne returneaza pachetul cu modificarile
+ulterioare
+
+remodelare2 : refacem pachetul ce a suferit modificari, 
+o vom folosi la split
+
+split : fucntie imparte pachetul dat dupa valoarea
+indicelui de split, refacem noile head-uri si tail-uri
+si redefinim un nou pachet
+
+main(void) : ne folosim de fgets pentru a citi toate informatiile 
+introduse de la tastatura si in functie de primul argument 
+aplicam functiile cerute si identificam erorile aparute, 
+urmand ca in final sa eliberam memoria
+
+In Parsare_info.h 
+Am implementat functiile necesare pentru a identifica 
+parametrii de comanda si pentru a aplica conform lor 
+modificarile cerute
+
+In Card.h
+Am implementat listele dublu inlantuite pentru carti, pachete.
+Lista cartilor de joc este generica, datele retinute de acesta
+sunt void *data, urmand sa relizez o structura pentru
+proprietatile lor.
+
+Comentarii asupra temei:
+    Probabil ca as fi putut realiza o implementare mai buna
+decat am facut, cu o organizare mai riguroasa, dar cred ca 
+am folosit toate cunostintele acumulate pe parcursul 
+semestrului la aceasta materie.
+    Din realizarea acestei teme am fixat mai bine toate 
+conceptele predate.
+OBSERVATIE
+    Am pozitionat anumite mesaje de eroare la capat de rand,
+fara alinierea traditionala pentru ca altfel depaseam 80
+caractere si nu am dorit sa despart mesajul in doua 
+printf-uri.
+
